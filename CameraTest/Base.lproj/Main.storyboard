@@ -22,7 +22,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FiB-kH-1W7">
-                                <rect key="frame" x="0.0" y="113" width="313" height="278"/>
+                                <rect key="frame" x="0.0" y="113" width="320" height="278"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aRg-Vs-Tzf">
                                     <size key="itemSize" width="136" height="141"/>
@@ -52,6 +52,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Picadeo" id="mLD-tx-4VW">
+                        <barButtonItem key="leftBarButtonItem" image="search.png" id="8sa-Fp-g0R"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="CNg-n9-A7K">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jEl-CB-2Ug">
                                 <rect key="frame" x="274" y="7" width="30" height="30"/>
@@ -412,7 +413,13 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-HN-llL">
                                 <rect key="frame" x="0.0" y="23" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items/>
+                                <items>
+                                    <barButtonItem title="Edit" id="b1B-ko-R9x">
+                                        <connections>
+                                            <segue destination="I88-T9-piv" kind="modal" id="Q8Q-G5-Ref"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7R-hD-CW4">
                                 <rect key="frame" x="139" y="34" width="44" height="21"/>
@@ -475,7 +482,13 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69O-pd-4mL">
                                 <rect key="frame" x="0.0" y="16" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items/>
+                                <items>
+                                    <barButtonItem title="Edit" id="cei-wc-Dg6">
+                                        <connections>
+                                            <segue destination="8lU-Gj-120" kind="modal" id="1QM-Xd-8ma"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVy-FG-xhy">
                                 <rect key="frame" x="110" y="243" width="102" height="30"/>
@@ -514,6 +527,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrF-yX-gl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882" y="1155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dub-5j-hZU">
+            <objects>
+                <viewController id="8lU-Gj-120" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggg-tS-Kgr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sin-l4-DC4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OCO-is-85W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-9y-sWG">
+                                <rect key="frame" x="0.0" y="23" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items/>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Stop Motion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcr-gB-XgT">
+                                <rect key="frame" x="95" y="273" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrM-xb-CJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="1154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cJ6-op-a14">
+            <objects>
+                <viewController id="I88-T9-piv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JZN-BV-OIF"/>
+                        <viewControllerLayoutGuide type="bottom" id="HbI-AZ-cSD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nt6-UP-ZdW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOg-GE-Ivc">
+                                <rect key="frame" x="121" y="273" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zv-R7-lCi">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s15-dK-fxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="1855"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="hEG-qN-8MB">
@@ -560,6 +636,7 @@
         <image name="home.png" width="30" height="30"/>
         <image name="login.jpeg" width="307" height="164"/>
         <image name="man.png" width="30" height="30"/>
+        <image name="search.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
