@@ -7,7 +7,7 @@
         <!--MainView Controller - Picadeo-->
         <scene sceneID="IBo-zH-m7P">
             <objects>
-                <viewController id="uaw-xa-Gk1" userLabel="MainView Controller - Picadeo" sceneMemberID="viewController">
+                <viewController id="uaw-xa-Gk1" userLabel="MainView Controller - Picadeo" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pXs-zZ-U3l"/>
                         <viewControllerLayoutGuide type="bottom" id="xW5-jP-UUC"/>
@@ -16,38 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-QB-JeK">
-                                <rect key="frame" x="0.0" y="69" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ylv-Fm-60D">
+                                <rect key="frame" x="150" y="70" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FiB-kH-1W7">
-                                <rect key="frame" x="0.0" y="113" width="320" height="278"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uaw-xa-Gk1" id="0Rt-gR-1nv"/>
+                                </connections>
+                            </textField>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ko9-lB-KcU">
+                                <rect key="frame" x="0.0" y="135" width="320" height="384"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aRg-Vs-Tzf">
-                                    <size key="itemSize" width="136" height="141"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RYc-Qi-l9o">
+                                    <size key="itemSize" width="100" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p5N-BC-Jqc">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="141"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="j0U-6n-Omj">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="136" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-5h-z3Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="151"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.35418294900000002" blue="0.36390027619999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="uaw-xa-Gk1" id="59d-e4-lTN"/>
+                                    <outlet property="delegate" destination="uaw-xa-Gk1" id="I8i-ZH-cjX"/>
+                                </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="hNT-jJ-mnA">
+                                <rect key="frame" x="13" y="74" width="121" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="divider_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lto-TD-6vr">
+                                <rect key="frame" x="10" y="111" width="304" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -67,6 +79,10 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Ko9-lB-KcU" id="bEb-CY-Ik7"/>
+                        <outlet property="textField" destination="Ylv-Fm-60D" id="anm-5H-6Wu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z62-zB-hAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -633,10 +649,12 @@
     <resources>
         <image name="camera.png" width="30" height="30"/>
         <image name="cctv.png" width="30" height="30"/>
+        <image name="divider_bar.png" width="697" height="13"/>
         <image name="home.png" width="30" height="30"/>
         <image name="login.jpeg" width="307" height="164"/>
         <image name="man.png" width="30" height="30"/>
         <image name="search.png" width="30" height="30"/>
+        <image name="search_text.png" width="97" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
