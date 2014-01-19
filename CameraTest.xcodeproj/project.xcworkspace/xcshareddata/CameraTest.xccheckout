@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ADAB6F02-2015-479F-A93E-7F92D2C7A30A</string>
+	<string>4BB28D87-02DD-4A1A-8F3D-57580631C4D1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CameraTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6D0D2176-A0D9-4CE0-8363-50541A1CA6E5</key>
-		<string>https://github.com/steve0503/CameraTest.git</string>
+		<key>DEA12655-17A2-4147-A613-1E9B95833196</key>
+		<string>https://github.com/steve0503/Picadoe_Storyboard.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CameraTest.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6D0D2176-A0D9-4CE0-8363-50541A1CA6E5</key>
+		<key>DEA12655-17A2-4147-A613-1E9B95833196</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/steve0503/CameraTest.git</string>
+	<string>https://github.com/steve0503/Picadoe_Storyboard.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6D0D2176-A0D9-4CE0-8363-50541A1CA6E5</string>
+	<string>DEA12655-17A2-4147-A613-1E9B95833196</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6D0D2176-A0D9-4CE0-8363-50541A1CA6E5</string>
+			<string>DEA12655-17A2-4147-A613-1E9B95833196</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CameraTest</string>
+			<string>CameraTest-master</string>
 		</dict>
 	</array>
 </dict>

@@ -20,10 +20,11 @@
     return self;
 }
 
--(void) setPhoto:(FlickrPhoto *)photo {
+-(void)setPhoto:(FlickrPhoto *)photo {
     if(_photo != photo) {
         _photo = photo;
     }
+    
     self.imageView.image = _photo.thumbnail;
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import "CameraViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import  <MobileCoreServices/MobileCoreServices.h>
 
 @interface CameraViewController ()
 
@@ -43,7 +45,7 @@
     imagePicker.delegate = self;
     imagePicker.allowsEditing = YES;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    imagePicker.mediaTypes = [[NSArray alloc ]initWithObjects:(NSString*)kUTTypeImage,nil];
     
     
     //    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSour];

@@ -8,6 +8,10 @@
 
 #import "VideoViewController.h"
 
+#import <MediaPlayer/MediaPlayer.h>
+
+#import  <MobileCoreServices/MobileCoreServices.h>
+
 @interface VideoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -42,7 +46,7 @@
     imagePicker.delegate = self;
     imagePicker.allowsEditing = YES;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    imagePicker.mediaTypes = [[NSArray alloc]initWithObjects:(NSString*)kUTTypeMovie, nil];
     
     
     

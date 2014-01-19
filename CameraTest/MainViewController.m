@@ -38,13 +38,18 @@
 #if 1
     // 1
     [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
+        
+        NSLog(@"results is : %ld ",[results count]);
+        
+        
         if(results && [results count] > 0) {
             // 2
             if(![self.searches containsObject:searchTerm]) {
                 
-                NSLog(@"Found %d photos matching %@", [results count],searchTerm);
+                NSLog(@"Found %ld photos matching %@", [results count],searchTerm);
             
                 [self.searches insertObject:searchTerm atIndex:0];
+                
                 self.searchResults[searchTerm] = results;
             
             }
@@ -69,21 +74,22 @@
     NSString *searchTerm = self.searches[section];
     return [self.searchResults[searchTerm] count];
     
-    return 2;
+
 }
 // 2
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
     return [self.searches count];
-    return 2;
+  
 }
-// 3
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"FlickrCell " forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+    FlickrPhotoCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
+    NSString *searchTerm = self.searches[indexPath.section];
+    cell.photo = self.searchResults[searchTerm]
+    [indexPath.row];
     return cell;
 }
 
-#if 0
+#if 1
 // 1
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *searchTerm = self.searches[indexPath.section]; FlickrPhoto *photo =
@@ -93,7 +99,7 @@
     retval.height += 35; retval.width += 35;
     return retval;
     
-    return
+    
 }
 #endif
 // 3
